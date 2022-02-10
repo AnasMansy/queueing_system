@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master.css">
+    
+</head>
+<body>
+    <form>
+        <div class="chooes-type">
+            <input id = "dete" type="radio" name="type" value="dete" onclick="showDete();">
+            <label for="dete">deterministic</label>
+            <input id = "stoc" type="radio" name="type" value="stoc"  onclick="showStoc();">
+            <label for="stoc">Stochastic</label>
+        </div>
+        <div class = "deterministic" id = "det">
+            <h3>Deterministic</h3>
+            <div class="inputs">
+                <label>Lamda</label>
+                <input type="text" id = "lamda">
+                <label>Mu</label>
+                <input type="text" id = mu>
+                <label>K</label>
+                <input type="text" id = k>
+                <label>t</label>
+                <input type="text" id="t">
+                <label>M</label>
+                <input type="text" id = "m">
+            </div>
+            <button type="button" onclick="calcD();">Calculate</button>
+            <div class="outputs">
+            
+                <div id="n">n(t): </div>
+                <div id="w">Wq(n): </div>
+            </div>
+        </div>
+        <div class="stochastic" id = "sto">
+            <h3>Stochastic</h3>
+            <div class="chooes-type">
+                 <input type="radio" id="M/M/1" name="st" onclick="_M_M_1();">
+            <label for="M/M/1">M/M/1</label>
+            <input type="radio" id="M/M/1/K" name="st" onclick="_M_M_1_K();">
+            <label for="M/M/1/K">M/M/1/K</label>
+            <input type="radio" id="M/M/C" name="st" onclick="_M_M_C();">
+            <label for="M/M/C">M/M/C</label>
+            <input type="radio" id="M/M/C/K" name="st" onclick="_M_M_C_K();">
+            <label for="M/M/C/K">M/M/C/K</label>
+            </div>
+           
+            <div class="inputs">
+                <div id="s_lamda">
+                    <label>Lamda</label>
+                    <input id="_lamda" type="text">
+                </div>
+                <div id="s_mu">
+                    <label>Mu</label>
+                    <input id="_mu" type="text">
+                </div>
+                <div id="s_k">
+                    <label >K</label>
+                    <input id="_k" type="text">
+                </div>
+                <div id="s_c">
+                    <label >C</label>
+                    <input id="_c" type="text">
+                </div>
+                <button type="button" onclick="calcS_1();" id="b_1">Calculate</button>
+                <button type="button" onclick="calcS_2();" id="b_2">Calculate</button>
+                <button type="button" onclick="calcS_3();" id="b_3">Calculate</button>
+                <button type="button" onclick="calcS_4();" id="b_4">Calculate</button>
+                
+            </div>
+            <div class="outputs">
+                <div id="_l">L: </div>
+                <div id="_lq">Lq: </div>
+                <div id="_w">W: </div>
+                <div id="_wq">Wq: </div>
+            </div>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
